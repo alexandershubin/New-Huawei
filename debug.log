@@ -1,0 +1,5 @@
+[1020/091705.346:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name metrics_client_id, discarding value 51f4a3c9ead94adabf178fc5ae2c62a9
+[1020/172548.524:ERROR:settings.cc(319)] Settings magic is not 1129342067
+[1026/190816.641:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name metrics_client_id, discarding value 51f4a3c9ead94adabf178fc5ae2c62a9
+[1108/232638.555:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name metrics_client_id, discarding value 51f4a3c9ead94adabf178fc5ae2c62a9
+[1113/174642.106:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name metrics_client_id, discarding value 51f4a3c9ead94adabf178fc5ae2c62a9
