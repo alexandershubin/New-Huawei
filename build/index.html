@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Huawei</title>
+  <title>Honor</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.min.css" rel="stylesheet">
@@ -13,6 +13,166 @@
   <script src="js/picturefill.js" async=""></script>
 </head>
 <body>
-  <section>Привет Мир ! Как дела</section>
+  <div class="container">
+
+    <div class="half-width">
+      <img src="#">
+      <label for="dish">Ваш город:</label>
+      <input type="text" id="city" name="city" list="cities">
+      <!-- Список возможных значений -->
+      <datalist id="cities">
+        <option value="Нижний Новгород"></option>
+        <option value="Москва"></option>
+        <option value="Санкт Петербург"></option>
+      </datalist>
+    </div>
+
+    <footer class="main-footer">
+      <div class="midlle-footer"></div>
+        <p>HUAWEI|HONOR</p>
+        <ul class="first-list">
+          <li>г. Нижний Новгород, Варварская 27/8, м.Горьковская</li>
+          <li>Режим работы c 9:00 до 20:00, без обеда и выходных</li>
+        </ul>
+        <div class="footer-tel">
+          <p>Прием звонков ежедневно круглосуточно</p>
+          <p>+7 (831) 420-65-70</p>
+        </div>
+        <button class="button">Связаться с нами</button>
+      </footer></div>
+    
+
+    <header class="page-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Ремонтируем</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">О компании</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Сотрудничество</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Гарантии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Новости</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <div>
+          <form>
+            <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
+            <input class="sb-search-submit" type="submit" value="">
+            <span class="sb-icon-search"></span>
+          </form>
+        <div>
+      </div></div></nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Девайсы</h1>
+      <section class="intro">
+        <div>
+          <h2 class="intro-main">Ремонт HUAWEI
+          <button class="button">Подробнее</button>
+        </h2></div>
+        <div>
+          <h2 class="intro-main">Ремонт HONOR
+          <button class="button">Подробнее</button>
+        </h2></div>
+      </section>
+
+      <section class="repair">
+        <h2>Мы ремонтируем</h2>
+        <ul class="repair-list">
+          <li class="repair-list__item">
+            <h3>Смартфоны<br>Huawei</h3>
+            <a href="#">Побробнее</a>
+            <img href="#">
+          </li>
+          <li class="repair-list__item">
+            <h3>Смартфоны<br>Honor</h3>
+            <a href="#">Побробнее</a>
+            <img href="#">
+          </li>
+          <li class="repair-list__item">
+            <h3>Планшеты</h3>
+            <a href="#">Побробнее</a>
+            <img href="#">
+          </li>
+          <li class="repair-list__item">
+            <h3>Ноутбуки</h3>
+            <a href="#">Побробнее</a>
+            <img href="#">
+          </li>
+          <li class="repair-list__item">
+            <h3>Часы</h3>
+            <a href="#">Побробнее</a>
+            <img href="#">
+          </li>
+        </ul>
+        <button class="button">Обратиться к нам</button>
+      </section>
+
+      <section class="exemple">
+        <h2>Примеры работ</h2>
+        <nav class="exemple-nav main-nav--closed main-nav--nojs">
+          <ul class="exemple-nav__list exemple-list">
+            <li class="exemple-list__item">
+              <a href="#">Смартфоны</a>
+            </li>
+            <li class="exemple-list__item">
+              <a href="#">Ноутбуки</a>
+            </li>
+            <li class="exemple-list__item">
+              <a href="#">Планшеты</a>
+            </li>
+            <li class="exemple-list__item">
+              <a href="#">Часы</a>
+            </li>
+          </ul>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <a class="page-header__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" width="100" height="83" alt="exemple">
+            </picture>
+          </a>
+        </nav>
+      </section>
+
+      <section class="form">
+        <h2>Оставьте заявку</h2>
+        <p>и узнайте стоимость ремонта за 5 минут!</p>
+        <form class="login-form" action="#" method="POST">
+          <div>
+            <p>
+              <label for="total-field">
+                <input type="text" id="total-field" name="total" placeholder="Ваше Имя">
+              </label>
+            </p>
+            <p>
+              <label for="tel-field">
+                <input type="tel" id="tel-field" name="tel-number" placeholder="+7(___)-___-__-__ *" required="">
+              </label>
+            </p>
+            <input type="submit" value="Отправить">
+          </div>
+        </form>
+        <p>Нажимая кнопку "Отправить", я даю согласие на обработку<br>персональных данных</p>
+      </section>
+    </main>
+  
 </body>
 </html>
