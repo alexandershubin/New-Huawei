@@ -1,4 +1,6 @@
-section.main-list {
+.main-list {
+  padding-left: 40px;
+  padding-right: 100px;
   background-color: rgba(196, 196, 196, 0.2);
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
@@ -61,6 +63,28 @@ ul > .site-list__item > a:active,
   background-color: #0088cc;
 }
 
+.site-list__item--search form {
+  display: flex;
+}
+
+li.site-list__item--search {
+  position: relative;
+}
+
+.site-list__item--search svg {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  cursor: pointer;
+}
+
+.site-list__item input[type="submit"],
 .site-list__item input[type="search"] {
-  display: none;
+  border: none;
+  background-color: rgba(196, 196, 196, 0);
+}
+
+.site-list__item--search :active input[type="search"],
+.site-list__item--search :hover input[type="search"] {
+  background-color: #ffffff;
 }
