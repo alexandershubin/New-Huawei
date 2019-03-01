@@ -185,14 +185,21 @@ th {
 }
 @font-face {
   font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
   src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  src: url("fonts/Roboto-Bold.woff2") format("woff2"), url("fonts/Roboto-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto";
+  font-weight: lighter;
+  font-style: normal;
   src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff");
 }
 body {
@@ -355,13 +362,13 @@ li {
 ul.sub-menu__item {
   position: absolute;
   display: none;
-  top: 48px;
-  left: -1px;
-  width: 140px;
+  width: 130px;
+  top: 50px;
   margin: 0;
   padding: 0;
   list-style: none;
   background-color: #fcf8e3;
+  z-index: 10;
 }
 ul.sub-menu__item a {
   margin-bottom: -1px;
@@ -401,15 +408,44 @@ li.site-list__item--search {
 .site-list__item--search :hover input[type="search"] {
   background-color: #ffffff;
 }
-section.intro {
+.intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 .intro-phone__first {
-  background: url("../img/Mask Group2.jpg") no-repeat;
+  position: relative;
+  width: 500px;
+  margin-top: -5px;
+  background: url("../img/Mask Group0.png") no-repeat;
+  background-size: cover;
+}
+.intro-phone__first img {
+  float: right;
+  height: 360px;
+  padding-top: 50px;
+  padding-right: 20px;
+}
+.intro-phone__second {
+  position: relative;
+  width: 500px;
+  margin-top: -5px;
+  background: url("../img/Mask Group.png") no-repeat;
+  background-size: cover;
+}
+.intro-phone__second img {
+  float: right;
+  height: 380px;
+  padding-top: 50px;
+}
+.intro__main {
+  font-weight: bold;
+  line-height: normal;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
