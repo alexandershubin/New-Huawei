@@ -146,26 +146,83 @@
     </header>
 
     <main class="page-main">
+
+        <div class="wrapper">
+          <input type="radio" name="point" id="slide1" checked="">
+          <input type="radio" name="point" id="slide2">
+          <input type="radio" name="point" id="slide3">
+          <input type="radio" name="point" id="slide4">
+          <input type="radio" name="point" id="slide5">
+          <div class="slider">
+            <div class="slides slide1">
+              <div class="intro-phone__first">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
+                  <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
+                </picture>
+                <h2 class="intro__main">Ремонт HUAWEI</h2>
+                <div class="intro__pictures">
+                  <img src="img/points.png" width="142" height="143" alt="points">
+                </div>
+                <a class="intro__info button" href="#">Подробнее</a>
+              </div>
+              <div class="intro-phone__second">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
+                  <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
+                </picture>
+                <h2 class="intro__main">Ремонт HONOR</h2>
+                <div class="intro__image">
+                  <img src="img/points.png" width="142" height="143" alt="points">
+                </div>
+                <a class="intro__info button" href="#">Подробнее</a>
+              </div>
+            </div>
+            <div class="slides slide2">
+              <div class="intro-phone__second">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
+                  <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
+                </picture>
+                <h2 class="intro__main">Ремонт HONOR</h2>
+                <div class="intro__image">
+                  <img src="img/points.png" width="142" height="143" alt="points">
+                </div>
+                <a class="intro__info button" href="#">Подробнее</a>
+              </div>
+              <div class="intro-phone__first">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
+                  <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
+                </picture>
+                <h2 class="intro__main">Ремонт HUAWEI</h2>
+                <div class="intro__pictures">
+                  <img src="img/points.png" width="142" height="143" alt="points">
+                </div>
+                <a class="intro__info button" href="#">Подробнее</a>
+              </div>
+            </div>
+            <div class="slides slide3"></div>
+            <div class="slides slide4"></div>
+            <div class="slides slide5"></div>
+          </div>	
+          <div class="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+          </div>
+        </div>
+
+
       <h1 class="visually-hidden">Девайсы</h1>
       <section class="intro">
-        <div class="intro-phone__first">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
-            <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
-          </picture>
-          <h2 class="intro__main">Ремонт HUAWEI</h2>
-          <button class="button">Подробнее</button>
-        </div>
-        <div class="intro-phone__second">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
-            <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 1">
-          </picture>
-          <h2 class="intro__main">Ремонт HONOR</h2>
-          <button class="button">Подробнее</button>
-        </div>
+        
       </section>
 
       <section class="repair">

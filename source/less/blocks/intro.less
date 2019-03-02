@@ -9,14 +9,25 @@
   width: 500px;
   margin-top: -5px;
   background: url("../img/Mask Group0.png") no-repeat;
-  background-size: cover;
 }
 
 .intro-phone__first img {
+  position: relative;
   float: right;
+  width: 215px;
   height: 360px;
   padding-top: 50px;
   padding-right: 20px;
+  z-index: 10;
+}
+
+.intro__pictures img {
+  position: absolute;
+  width: 142px;
+  height: 143px;
+  right: 123px;
+  top: 119px;
+  z-index: 0;
 }
 
 .intro-phone__second {
@@ -28,15 +39,42 @@
 }
 
 .intro-phone__second img {
+  position: relative;
   float: right;
-  height: 380px;
-  padding-top: 50px;
+  padding-top: 38px;
+  padding-bottom: 30px;
+  z-index: 1;
 }
 
 .intro__main {
+  width: 165px;
   font-weight: bold;
   line-height: normal;
   font-size: 48px;
   text-transform: uppercase;
   color: #ffffff;
+  margin-top: 150px;
+  padding-left: 24px;
 }
+
+.intro__image {
+  position: absolute;
+  top: 132px;
+  left: 230px;
+  z-index: 0;
+}
+
+.intro__info.button {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.intro__info.button:hover,
+.intro__info.button:focus {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.intro__info.button:active {
+  border: 2px solid #000000;
+}
+
