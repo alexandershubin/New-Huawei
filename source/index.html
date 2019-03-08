@@ -6,272 +6,301 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font">
+
+  <script src="js/jquery.min.js"></script>
   <script>
     document.createElement( "picture" );
   </script>
   <script src="js/picturefill.js" async></script>
 </head>
 <body>
-  <div class="container">
 
-    <div class="half-width">
-      <a href="#">
-        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0)">
-          <path d="M10.3967 3.16289C9.48465 1.384 7.63279 0.162781 5.5 0.162781C3.36651 0.162781 1.51441 1.38447 0.602613 3.16464C0.598994 3.17176 0.594674 3.17818 0.591871 3.18566C0.21426 3.93072 0 4.772 0 5.66278C0 6.5538 0.21426 7.39508 0.591871 8.13991C0.594674 8.14738 0.598994 8.1538 0.602613 8.16092C1.51418 9.94109 3.36651 11.1628 5.5 11.1628C7.63279 11.1628 9.48465 9.94179 10.3967 8.16267C10.4008 8.15474 10.4056 8.14761 10.4086 8.13921C10.786 7.39437 11 6.55333 11 5.66278C11 4.77223 10.786 3.93119 10.4086 3.18636C10.4053 3.17795 10.4008 3.17083 10.3967 3.16289ZM10.0303 7.81495H7.92832C8.04508 7.22577 8.11444 6.58147 8.12752 5.90191H10.5096C10.4773 6.58416 10.3093 7.23009 10.0303 7.81495ZM5.5 10.6845C4.74361 10.6845 4.06522 9.7148 3.68048 8.29322H7.31952C6.93478 9.7148 6.25639 10.6845 5.5 10.6845ZM3.56617 7.81495C3.44252 7.22694 3.36768 6.5803 3.35331 5.90191H7.64692C7.63232 6.5803 7.55748 7.22694 7.43406 7.81495H3.56617ZM0.490404 5.90191H2.87248C2.8858 6.58147 2.95492 7.22577 3.07168 7.81495H0.969716C0.690653 7.23009 0.522748 6.58416 0.490404 5.90191ZM0.969716 3.51061H3.07168C2.95492 4.09979 2.88556 4.74409 2.87248 5.42365H0.490404C0.522748 4.7414 0.690653 4.09547 0.969716 3.51061ZM5.5 0.641042C6.25639 0.641042 6.93478 1.61076 7.31952 3.03235H3.68048C4.06522 1.61076 4.74361 0.641042 5.5 0.641042ZM7.43383 3.51061C7.55748 4.09839 7.63232 4.74526 7.64669 5.42365H3.35308C3.36768 4.74526 3.44252 4.09839 3.56594 3.51061H7.43383ZM8.12752 5.42365C8.1142 4.74409 8.04508 4.09979 7.92832 3.51061H10.0303C10.3093 4.09547 10.4773 4.7414 10.5096 5.42365H8.12752ZM9.76944 3.03235H7.82008C7.57803 2.08353 7.20696 1.30963 6.75228 0.805561C8.02231 1.13343 9.09653 1.94412 9.76944 3.03235ZM4.24748 0.805561C3.79304 1.30963 3.42197 2.08353 3.17969 3.03235H1.23033C1.90347 1.94412 2.97769 1.13343 4.24748 0.805561ZM1.23056 8.29322H3.17969C3.42174 9.24203 3.79281 10.0159 4.24748 10.52C2.97769 10.1921 1.90347 9.38121 1.23056 8.29322ZM6.75252 10.52C7.20696 10.0159 7.57803 9.24203 7.82031 8.29322H9.76944C9.09653 9.38121 8.02231 10.1921 6.75252 10.52Z" fill="#01B4E1"/>
-          </g>
-          <defs>
-          <clipPath id="clip0">
-          <rect width="11" height="11" fill="white" transform="translate(0 0.162781)"/>
-          </clipPath>
-          </defs>
-        </svg>
-      </a>
-        
-      <label for="dish">Ваш город:</label>
-      <input type="text" id="city" name="city" list="cities">
-      <!-- Список возможных значений -->
-      <datalist id="cities">
-        <option value="Нижний Новгород"></option>
-        <option value="Москва"></option>
-        <option value="Санкт Петербург"></option>
-      </datalist>
-      <svg class="half-width__city" width="9" height="12" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="half-width">
+    <a href="#">
+      <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0)">
-        <path d="M4.15686 5.73038L7.96648 0.96792C8.00667 0.917504 8.01086 0.852143 7.97829 0.798278C7.94534 0.744249 7.88057 0.710419 7.80971 0.710419L0.190485 0.710418C0.119626 0.710418 0.0546718 0.744248 0.021719 0.798278C0.0072422 0.822254 3.80866e-06 0.84853 3.80752e-06 0.874641C3.80609e-06 0.907322 0.0114326 0.939838 0.0337191 0.96792L3.84333 5.73038C3.87895 5.77489 3.93743 5.80133 4.0001 5.80133C4.06277 5.80133 4.12124 5.77472 4.15686 5.73038Z" fill="white"/>
+        <path d="M10.3967 3.16289C9.48465 1.384 7.63279 0.162781 5.5 0.162781C3.36651 0.162781 1.51441 1.38447 0.602613 3.16464C0.598994 3.17176 0.594674 3.17818 0.591871 3.18566C0.21426 3.93072 0 4.772 0 5.66278C0 6.5538 0.21426 7.39508 0.591871 8.13991C0.594674 8.14738 0.598994 8.1538 0.602613 8.16092C1.51418 9.94109 3.36651 11.1628 5.5 11.1628C7.63279 11.1628 9.48465 9.94179 10.3967 8.16267C10.4008 8.15474 10.4056 8.14761 10.4086 8.13921C10.786 7.39437 11 6.55333 11 5.66278C11 4.77223 10.786 3.93119 10.4086 3.18636C10.4053 3.17795 10.4008 3.17083 10.3967 3.16289ZM10.0303 7.81495H7.92832C8.04508 7.22577 8.11444 6.58147 8.12752 5.90191H10.5096C10.4773 6.58416 10.3093 7.23009 10.0303 7.81495ZM5.5 10.6845C4.74361 10.6845 4.06522 9.7148 3.68048 8.29322H7.31952C6.93478 9.7148 6.25639 10.6845 5.5 10.6845ZM3.56617 7.81495C3.44252 7.22694 3.36768 6.5803 3.35331 5.90191H7.64692C7.63232 6.5803 7.55748 7.22694 7.43406 7.81495H3.56617ZM0.490404 5.90191H2.87248C2.8858 6.58147 2.95492 7.22577 3.07168 7.81495H0.969716C0.690653 7.23009 0.522748 6.58416 0.490404 5.90191ZM0.969716 3.51061H3.07168C2.95492 4.09979 2.88556 4.74409 2.87248 5.42365H0.490404C0.522748 4.7414 0.690653 4.09547 0.969716 3.51061ZM5.5 0.641042C6.25639 0.641042 6.93478 1.61076 7.31952 3.03235H3.68048C4.06522 1.61076 4.74361 0.641042 5.5 0.641042ZM7.43383 3.51061C7.55748 4.09839 7.63232 4.74526 7.64669 5.42365H3.35308C3.36768 4.74526 3.44252 4.09839 3.56594 3.51061H7.43383ZM8.12752 5.42365C8.1142 4.74409 8.04508 4.09979 7.92832 3.51061H10.0303C10.3093 4.09547 10.4773 4.7414 10.5096 5.42365H8.12752ZM9.76944 3.03235H7.82008C7.57803 2.08353 7.20696 1.30963 6.75228 0.805561C8.02231 1.13343 9.09653 1.94412 9.76944 3.03235ZM4.24748 0.805561C3.79304 1.30963 3.42197 2.08353 3.17969 3.03235H1.23033C1.90347 1.94412 2.97769 1.13343 4.24748 0.805561ZM1.23056 8.29322H3.17969C3.42174 9.24203 3.79281 10.0159 4.24748 10.52C2.97769 10.1921 1.90347 9.38121 1.23056 8.29322ZM6.75252 10.52C7.20696 10.0159 7.57803 9.24203 7.82031 8.29322H9.76944C9.09653 9.38121 8.02231 10.1921 6.75252 10.52Z" fill="#01B4E1"/>
         </g>
         <defs>
         <clipPath id="clip0">
-        <rect width="8" height="8" fill="white" transform="translate(8 0.662781) rotate(90)"/>
+        <rect width="11" height="11" fill="white" transform="translate(0 0.162781)"/>
         </clipPath>
         </defs>
       </svg>
-    </div>
+    </a>
+      
+    <label for="dish">Ваш город:</label>
+    <input type="text" id="city" name="city" list="cities">
+    <!-- Список возможных значений -->
+    <datalist id="cities">
+      <option value="Нижний Новгород"></option>
+      <option value="Москва"></option>
+      <option value="Санкт Петербург"></option>
+    </datalist>
+    <svg class="half-width__city" width="9" height="12" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0)">
+      <path d="M4.15686 5.73038L7.96648 0.96792C8.00667 0.917504 8.01086 0.852143 7.97829 0.798278C7.94534 0.744249 7.88057 0.710419 7.80971 0.710419L0.190485 0.710418C0.119626 0.710418 0.0546718 0.744248 0.021719 0.798278C0.0072422 0.822254 3.80866e-06 0.84853 3.80752e-06 0.874641C3.80609e-06 0.907322 0.0114326 0.939838 0.0337191 0.96792L3.84333 5.73038C3.87895 5.77489 3.93743 5.80133 4.0001 5.80133C4.06277 5.80133 4.12124 5.77472 4.15686 5.73038Z" fill="white"/>
+      </g>
+      <defs>
+      <clipPath id="clip0">
+      <rect width="8" height="8" fill="white" transform="translate(8 0.662781) rotate(90)"/>
+      </clipPath>
+      </defs>
+    </svg>
+  </div>
+  
+  <header class="page-header">
+    <section class="page-header__main">
+      <div class="page-header__middle">
+        <img src="img/huawei_logo 1.png" width="200" height="25" alt="Логотоип">
+      </div>
+      <ul class="header-site__list header-list">
+        <li class="header-list__item">
+          <svg width="13" height="13" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+            <path d="M6.5 0.5C3.97993 0.5 1.92969 2.55024 1.92969 5.07031C1.92969 5.92176 2.16554 6.7527 2.61191 7.47359L6.23985 13.32C6.30934 13.432 6.43178 13.5 6.56345 13.5C6.56447 13.5 6.56546 13.5 6.56647 13.5C6.69929 13.499 6.82198 13.4288 6.8902 13.3149L10.4257 7.41184C10.8474 6.70618 11.0703 5.8965 11.0703 5.07031C11.0703 2.55024 9.02007 0.5 6.5 0.5ZM9.77199 7.02077L6.55769 12.3875L3.25932 7.07226C2.88778 6.47223 2.68633 5.77998 2.68633 5.07031C2.68633 2.97025 4.39994 1.25664 6.5 1.25664C8.60006 1.25664 10.3111 2.97025 10.3111 5.07031C10.3111 5.75893 10.123 6.43348 9.77199 7.02077Z" fill="#01B4E1"/>
+            <path d="M6.5 2.78516C5.23996 2.78516 4.21484 3.81028 4.21484 5.07031C4.21484 6.3223 5.22328 7.35547 6.5 7.35547C7.79246 7.35547 8.78516 6.30854 8.78516 5.07031C8.78516 3.81028 7.76004 2.78516 6.5 2.78516ZM6.5 6.59883C5.65558 6.59883 4.97148 5.91244 4.97148 5.07031C4.97148 4.23029 5.65998 3.5418 6.5 3.5418C7.34002 3.5418 8.02598 4.23029 8.02598 5.07031C8.02598 5.90015 7.3578 6.59883 6.5 6.59883Z" fill="#01B4E1"/>
+            </g>
+            <defs>
+            <clipPath id="clip0">
+            <rect width="13" height="13" fill="white" transform="translate(0 0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>      
+          г. Нижний Новгород, Варварская 27/8, м.Горьковская
+        </li>
+        <li class="header-list__item">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+            <path d="M10.5609 3.35899C9.98099 2.00691 8.99548 1.02357 7.63211 0.442102C6.95069 0.151483 6.23678 0.0030365 5.49096 0.0030365C4.74526 0.0030365 4.03662 0.150081 3.35595 0.442102C2.00387 1.02203 1.014 2.00473 0.433026 3.35899C0.141904 4.03747 0 4.74828 0 5.49398C0 6.23982 0.141904 6.95653 0.433026 7.63515C1.014 8.9894 2.004 9.978 3.35595 10.5581C4.03675 10.8501 4.74524 10.997 5.49096 10.997C6.23668 10.997 6.95069 10.8485 7.63201 10.5581C8.99538 9.97658 9.98088 8.9871 10.561 7.63515C10.853 6.95435 11 6.23982 11 5.49398C11 4.74828 10.8531 4.03977 10.5609 3.35899ZM9.68295 7.92384C9.2512 8.66428 8.65971 9.25168 7.91477 9.68598C7.17434 10.1177 6.36305 10.3355 5.49109 10.3355C4.83558 10.3355 4.21009 10.2092 3.61461 9.95056C3.01916 9.69202 2.50503 9.35214 2.07496 8.92218C1.64488 8.4921 1.30257 7.97297 1.0466 7.37649C0.791389 6.78218 0.667711 6.14963 0.667711 5.49399C0.667711 4.6219 0.881977 3.81473 1.3113 3.07635C1.74215 2.33527 2.33376 1.74724 3.07344 1.31419C3.81299 0.881167 4.61901 0.664582 5.49096 0.664582C6.36305 0.664582 7.17419 0.882443 7.91464 1.31419C8.65959 1.74851 9.2498 2.33653 9.68282 3.07633C10.1158 3.81601 10.3323 4.6219 10.3323 5.49398C10.3323 6.36609 10.1173 7.17876 9.68295 7.92384Z" fill="#01B4E1"/>
+            <path d="M5.8398 5.44589V2.33049C5.8398 2.14407 5.67737 1.9937 5.49093 1.9937C5.31657 1.9937 5.16016 2.14407 5.16016 2.33049V5.49399C5.16016 5.50002 5.17222 5.52415 5.17222 5.54212C5.16016 5.65039 5.19032 5.7406 5.26243 5.81284L7.06077 7.61106C7.1811 7.73139 7.40358 7.73139 7.52383 7.61106C7.66212 7.47275 7.65302 7.27207 7.52383 7.14196L5.8398 5.44589Z" fill="#01B4E1"/>
+            </g>
+            <defs>
+            <clipPath id="clip0">
+            <rect width="11" height="11" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>    
+          Режим работы c 9:00 до 20:00, без обеда и выходных
+        </li>
+      </ul>
+      <div class="page-header__info">
+        <p>Прием звонков ежедневно круглосуточно</p>
+        <p class="page-header__tel">+7 (831) 420-65-70</p>
+      </div>
+      <a class="page-header__connect button" href="#">Связаться с нами</a>
+    </section>
 
-    <header class="page-header">
-      <section class="page-header__main">
-        <div class="page-header__middle">
-          <img src="img/huawei_logo 1.png" width="200" height="25" alt="Логотоип">
-        </div>
-        <ul class="header-site__list header-list">
-          <li class="header-list__item">
-            <svg width="13" height="13" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0)">
-              <path d="M6.5 0.5C3.97993 0.5 1.92969 2.55024 1.92969 5.07031C1.92969 5.92176 2.16554 6.7527 2.61191 7.47359L6.23985 13.32C6.30934 13.432 6.43178 13.5 6.56345 13.5C6.56447 13.5 6.56546 13.5 6.56647 13.5C6.69929 13.499 6.82198 13.4288 6.8902 13.3149L10.4257 7.41184C10.8474 6.70618 11.0703 5.8965 11.0703 5.07031C11.0703 2.55024 9.02007 0.5 6.5 0.5ZM9.77199 7.02077L6.55769 12.3875L3.25932 7.07226C2.88778 6.47223 2.68633 5.77998 2.68633 5.07031C2.68633 2.97025 4.39994 1.25664 6.5 1.25664C8.60006 1.25664 10.3111 2.97025 10.3111 5.07031C10.3111 5.75893 10.123 6.43348 9.77199 7.02077Z" fill="#01B4E1"/>
-              <path d="M6.5 2.78516C5.23996 2.78516 4.21484 3.81028 4.21484 5.07031C4.21484 6.3223 5.22328 7.35547 6.5 7.35547C7.79246 7.35547 8.78516 6.30854 8.78516 5.07031C8.78516 3.81028 7.76004 2.78516 6.5 2.78516ZM6.5 6.59883C5.65558 6.59883 4.97148 5.91244 4.97148 5.07031C4.97148 4.23029 5.65998 3.5418 6.5 3.5418C7.34002 3.5418 8.02598 4.23029 8.02598 5.07031C8.02598 5.90015 7.3578 6.59883 6.5 6.59883Z" fill="#01B4E1"/>
-              </g>
-              <defs>
-              <clipPath id="clip0">
-              <rect width="13" height="13" fill="white" transform="translate(0 0.5)"/>
-              </clipPath>
-              </defs>
-            </svg>      
-            г. Нижний Новгород, Варварская 27/8, м.Горьковская
+    <section class="main-list">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">Главная</a>
           </li>
-          <li class="header-list__item">
-            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0)">
-              <path d="M10.5609 3.35899C9.98099 2.00691 8.99548 1.02357 7.63211 0.442102C6.95069 0.151483 6.23678 0.0030365 5.49096 0.0030365C4.74526 0.0030365 4.03662 0.150081 3.35595 0.442102C2.00387 1.02203 1.014 2.00473 0.433026 3.35899C0.141904 4.03747 0 4.74828 0 5.49398C0 6.23982 0.141904 6.95653 0.433026 7.63515C1.014 8.9894 2.004 9.978 3.35595 10.5581C4.03675 10.8501 4.74524 10.997 5.49096 10.997C6.23668 10.997 6.95069 10.8485 7.63201 10.5581C8.99538 9.97658 9.98088 8.9871 10.561 7.63515C10.853 6.95435 11 6.23982 11 5.49398C11 4.74828 10.8531 4.03977 10.5609 3.35899ZM9.68295 7.92384C9.2512 8.66428 8.65971 9.25168 7.91477 9.68598C7.17434 10.1177 6.36305 10.3355 5.49109 10.3355C4.83558 10.3355 4.21009 10.2092 3.61461 9.95056C3.01916 9.69202 2.50503 9.35214 2.07496 8.92218C1.64488 8.4921 1.30257 7.97297 1.0466 7.37649C0.791389 6.78218 0.667711 6.14963 0.667711 5.49399C0.667711 4.6219 0.881977 3.81473 1.3113 3.07635C1.74215 2.33527 2.33376 1.74724 3.07344 1.31419C3.81299 0.881167 4.61901 0.664582 5.49096 0.664582C6.36305 0.664582 7.17419 0.882443 7.91464 1.31419C8.65959 1.74851 9.2498 2.33653 9.68282 3.07633C10.1158 3.81601 10.3323 4.6219 10.3323 5.49398C10.3323 6.36609 10.1173 7.17876 9.68295 7.92384Z" fill="#01B4E1"/>
-              <path d="M5.8398 5.44589V2.33049C5.8398 2.14407 5.67737 1.9937 5.49093 1.9937C5.31657 1.9937 5.16016 2.14407 5.16016 2.33049V5.49399C5.16016 5.50002 5.17222 5.52415 5.17222 5.54212C5.16016 5.65039 5.19032 5.7406 5.26243 5.81284L7.06077 7.61106C7.1811 7.73139 7.40358 7.73139 7.52383 7.61106C7.66212 7.47275 7.65302 7.27207 7.52383 7.14196L5.8398 5.44589Z" fill="#01B4E1"/>
-              </g>
-              <defs>
-              <clipPath id="clip0">
-              <rect width="11" height="11" fill="white"/>
-              </clipPath>
-              </defs>
-            </svg>    
-            Режим работы c 9:00 до 20:00, без обеда и выходных
+          <li class="site-list__item site-list__item--open sub-menu">
+            <a href="#">Ремонтируем
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M5.19608 8.58782L9.9581 1.6829C10.0083 1.6098 10.0136 1.51504 9.97286 1.43694C9.93167 1.3586 9.85072 1.30956 9.76214 1.30956L0.238104 1.30955C0.14953 1.30955 0.0683384 1.3586 0.0271473 1.43694C0.00905132 1.4717 2.85227e-06 1.5098 2.85062e-06 1.54766C2.84854e-06 1.59504 0.0142889 1.64218 0.0421467 1.6829L4.80417 8.58782C4.84869 8.65235 4.92179 8.69068 5.00012 8.69068C5.07846 8.69068 5.15155 8.65211 5.19608 8.58782Z" fill="black"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                </clipPath>
+                </defs>
+              </svg>
+            </a>  
+            <ul class="sub-menu__item">
+              <li><a href="#1">Телефоны</a></li>
+              <li><a href="#2">Планшеты</a></li>
+              <li><a href="#3">Ноутбуки</a></li>
+            </ul>
+          </li>
+          <li class="site-list__item">
+            <a href="#">О компании</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Сотрудничество</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Гарантии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Новости</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Контакты</a>
+          </li>
+          <li class="site-list__item site-list__item--search"> 
+            <form>
+              <input class="sb-search-input" type="search" value="" name="search" id="search">
+              <input class="sb-search-submit" type="submit" value="">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.7885 22.7761L17.9562 16.9437C19.5207 15.145 20.4679 12.7982 20.4679 10.2333C20.4679 4.58714 15.8755 0 10.2347 0C4.58854 0 0.00140381 4.59246 0.00140381 10.2333C0.00140381 15.8741 4.59386 20.4665 10.2347 20.4665C12.7996 20.4665 15.1464 19.5193 16.9451 17.9548L22.7775 23.7871C22.9158 23.9255 23.1021 24 23.283 24C23.4639 24 23.6502 23.9308 23.7885 23.7871C24.0653 23.5104 24.0653 23.0528 23.7885 22.7761ZM1.43289 10.2333C1.43289 5.38004 5.38145 1.43681 10.2293 1.43681C15.0826 1.43681 19.0258 5.38537 19.0258 10.2333C19.0258 15.0812 15.0826 19.035 10.2293 19.035C5.38145 19.035 1.43289 15.0865 1.43289 10.2333Z" fill="black"/>
+              </svg>
+            </form>
           </li>
         </ul>
-        <div class="page-header__info">
-          <p>Прием звонков ежедневно круглосуточно</p>
-          <p class="page-header__tel">+7 (831) 420-65-70</p>
-        </div>
-        <a class="page-header__connect button" href="#">Связаться с нами</a>
-      </section>
+      </nav>
+    </section>
+  </header>
 
-      <section class="main-list">
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="#">Главная</a>
-            </li>
-            <li class="site-list__item site-list__item--open sub-menu">
-              <a href="#">Ремонтируем
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0)">
-                  <path d="M5.19608 8.58782L9.9581 1.6829C10.0083 1.6098 10.0136 1.51504 9.97286 1.43694C9.93167 1.3586 9.85072 1.30956 9.76214 1.30956L0.238104 1.30955C0.14953 1.30955 0.0683384 1.3586 0.0271473 1.43694C0.00905132 1.4717 2.85227e-06 1.5098 2.85062e-06 1.54766C2.84854e-06 1.59504 0.0142889 1.64218 0.0421467 1.6829L4.80417 8.58782C4.84869 8.65235 4.92179 8.69068 5.00012 8.69068C5.07846 8.69068 5.15155 8.65211 5.19608 8.58782Z" fill="black"/>
-                  </g>
-                  <defs>
-                  <clipPath id="clip0">
-                  <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
-                  </clipPath>
-                  </defs>
-                </svg>
-              </a>  
-              <ul class="sub-menu__item">
-                <li><a href="#1">Телефоны</a></li>
-                <li><a href="#2">Планшеты</a></li>
-                <li><a href="#3">Ноутбуки</a></li>
-              </ul>
-            </li>
-            <li class="site-list__item">
-              <a href="#">О компании</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Сотрудничество</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Гарантии</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Новости</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Контакты</a>
-            </li>
-            <li class="site-list__item site-list__item--search"> 
-              <form>
-                <input class="sb-search-input" type="search" value="" name="search" id="search">
-                <input class="sb-search-submit" type="submit" value="">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.7885 22.7761L17.9562 16.9437C19.5207 15.145 20.4679 12.7982 20.4679 10.2333C20.4679 4.58714 15.8755 0 10.2347 0C4.58854 0 0.00140381 4.59246 0.00140381 10.2333C0.00140381 15.8741 4.59386 20.4665 10.2347 20.4665C12.7996 20.4665 15.1464 19.5193 16.9451 17.9548L22.7775 23.7871C22.9158 23.9255 23.1021 24 23.283 24C23.4639 24 23.6502 23.9308 23.7885 23.7871C24.0653 23.5104 24.0653 23.0528 23.7885 22.7761ZM1.43289 10.2333C1.43289 5.38004 5.38145 1.43681 10.2293 1.43681C15.0826 1.43681 19.0258 5.38537 19.0258 10.2333C19.0258 15.0812 15.0826 19.035 10.2293 19.035C5.38145 19.035 1.43289 15.0865 1.43289 10.2333Z" fill="black"/>
-                </svg>
-              </form>
-            </li>
-          </ul>
-        </nav>
-      </section>
-    </header>
-
-    <main class="page-main">
-
-        <div class="wrapper">
-          <input type="radio" name="point" id="slide1" checked>
-          <input type="radio" name="point" id="slide2">
-          <input type="radio" name="point" id="slide3">
-          <input type="radio" name="point" id="slide4">
-          <input type="radio" name="point" id="slide5">
-          <div class="slider">
-            <div class="slides slide1">
-              <div class="intro-phone__first">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
-                  <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
-                </picture>
-                <h2 class="intro__main">Ремонт HUAWEI</h2>
-                <div class="intro__pictures">
-                  <img src="img/points.png" width="142" height="143" alt="points">
-                </div>
-                <a class="intro__info button" href="#">Подробнее</a>
-              </div>
-              <div class="intro-phone__second">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
-                  <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
-                </picture>
-                <h2 class="intro__main">Ремонт HONOR</h2>
-                <div class="intro__image">
-                  <img src="img/points.png" width="142" height="143" alt="points">
-                </div>
-                <a class="intro__info button" href="#">Подробнее</a>
-              </div>
+  <main class="page-main">
+    <div class="container">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="intro-phone__first">
+            <a class="intro__toggle" href="#">
+              <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.6837 7.79875L4.28051 7.79875L9.62623 2.36545C10.0946 1.88977 10.0946 1.11813 9.62623 0.642523C9.15791 0.166563 8.39866 0.166563 7.93103 0.642523L0.538739 8.15558C0.0704203 8.63126 0.0704203 9.40297 0.538739 9.87851L7.93103 17.3919C8.16512 17.63 8.47191 17.7488 8.77863 17.7488C9.08535 17.7488 9.39214 17.63 9.62623 17.3919C10.0946 16.9162 10.0946 16.1446 9.62623 15.6691L4.28051 10.2355L26.6837 10.2355C27.3457 10.2355 27.8826 9.68992 27.8826 9.01708C27.8826 8.34423 27.3458 7.79875 26.6837 7.79875Z" fill="white"/>
+              </svg> 
+            </a>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
+              <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
+            </picture>
+            <h2 class="intro__main">Ремонт HUAWEI</h2>
+            <div class="intro__pictures">
+              <img src="img/points.png" width="142" height="143" alt="points">
             </div>
-            <div class="slides slide2">
-              <div class="intro-phone__second">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
-                  <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
-                </picture>
-                <h2 class="intro__main">Ремонт HONOR</h2>
-                <div class="intro__image">
-                  <img src="img/points.png" width="142" height="143" alt="points">
-                </div>
-                <a class="intro__info button" href="#">Подробнее</a>
-              </div>
-              <div class="intro-phone__first">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
-                  <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
-                </picture>
-                <h2 class="intro__main">Ремонт HUAWEI</h2>
-                <div class="intro__pictures">
-                  <img src="img/points.png" width="142" height="143" alt="points">
-                </div>
-                <a class="intro__info button" href="#">Подробнее</a>
-              </div>
+            <a class="intro__info button" href="#">Подробнее</a>
+          </div>
+          <div class="intro-phone__second">
+            <div class="intro__toggle-second">
+              <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.6837 7.79875L4.28051 7.79875L9.62623 2.36545C10.0946 1.88977 10.0946 1.11813 9.62623 0.642523C9.15791 0.166563 8.39866 0.166563 7.93103 0.642523L0.538739 8.15558C0.0704203 8.63126 0.0704203 9.40297 0.538739 9.87851L7.93103 17.3919C8.16512 17.63 8.47191 17.7488 8.77863 17.7488C9.08535 17.7488 9.39214 17.63 9.62623 17.3919C10.0946 16.9162 10.0946 16.1446 9.62623 15.6691L4.28051 10.2355L26.6837 10.2355C27.3457 10.2355 27.8826 9.68992 27.8826 9.01708C27.8826 8.34423 27.3458 7.79875 26.6837 7.79875Z" fill="white"/>
+              </svg>    
             </div>
-            <div class="slides slide3">
-              <div class="intro-phone__first">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
-                  <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
-                </picture>
-                <h2 class="intro__main">Ремонт HUAWEI</h2>
-                <div class="intro__pictures">
-                  <img src="img/points.png" width="142" height="143" alt="points">
-                </div>
-                <a class="intro__info button" href="#">Подробнее</a>
-              </div>
-              <div class="intro-phone__second">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
-                  <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
-                </picture>
-                <h2 class="intro__main">Ремонт HONOR</h2>
-                <div class="intro__image">
-                  <img src="img/points.png" width="142" height="143" alt="points">
-                </div>
-                <a class="intro__info button" href="#">Подробнее</a>
-              </div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
+              <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
+            </picture>
+            <h2 class="intro__main">Ремонт HONOR</h2>
+            <div class="intro__image">
+              <img src="img/points.png" width="142" height="143" alt="points">
             </div>
-            <div class="slides slide4">
-              <div class="intro-phone__second">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
-                  <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
-                </picture>
-                <h2 class="intro__main">Ремонт HONOR</h2>
-                <div class="intro__image">
-                  <img src="img/points.png" width="142" height="143" alt="points">
-                </div>
-                <a class="intro__info button" href="#">Подробнее</a>
-              </div>
-              <div class="intro-phone__first">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
-                  <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
-                </picture>
-                <h2 class="intro__main">Ремонт HUAWEI</h2>
-                <div class="intro__pictures">
-                  <img src="img/points.png" width="142" height="143" alt="points">
-                </div>
-                <a class="intro__info button" href="#">Подробнее</a>
-              </div>
-            </div>
-          </div>	
-          <div class="controls">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
-            <label for="slide3"></label>
-            <label for="slide4"></label>
+            <a class="intro__info button" href="#">Подробнее</a>
           </div>
         </div>
-
-
-      <h1 class="visually-hidden">Девайсы</h1>
-      <section class="intro">
-        
-      </section>
+        <div class="item">
+          <div class="item">
+            <div class="intro-phone__first">
+              <a class="intro__toggle" href="#">
+                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.6837 7.79875L4.28051 7.79875L9.62623 2.36545C10.0946 1.88977 10.0946 1.11813 9.62623 0.642523C9.15791 0.166563 8.39866 0.166563 7.93103 0.642523L0.538739 8.15558C0.0704203 8.63126 0.0704203 9.40297 0.538739 9.87851L7.93103 17.3919C8.16512 17.63 8.47191 17.7488 8.77863 17.7488C9.08535 17.7488 9.39214 17.63 9.62623 17.3919C10.0946 16.9162 10.0946 16.1446 9.62623 15.6691L4.28051 10.2355L26.6837 10.2355C27.3457 10.2355 27.8826 9.68992 27.8826 9.01708C27.8826 8.34423 27.3458 7.79875 26.6837 7.79875Z" fill="white"/>
+                </svg> 
+              </a>
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
+                <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
+              </picture>
+              <h2 class="intro__main">Ремонт HUAWEI</h2>
+              <div class="intro__pictures">
+                <img src="img/points.png" width="142" height="143" alt="points">
+              </div>
+              <a class="intro__info button" href="#">Подробнее</a>
+            </div>
+            <div class="intro-phone__second">
+              <div class="intro__toggle-second">
+                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.6837 7.79875L4.28051 7.79875L9.62623 2.36545C10.0946 1.88977 10.0946 1.11813 9.62623 0.642523C9.15791 0.166563 8.39866 0.166563 7.93103 0.642523L0.538739 8.15558C0.0704203 8.63126 0.0704203 9.40297 0.538739 9.87851L7.93103 17.3919C8.16512 17.63 8.47191 17.7488 8.77863 17.7488C9.08535 17.7488 9.39214 17.63 9.62623 17.3919C10.0946 16.9162 10.0946 16.1446 9.62623 15.6691L4.28051 10.2355L26.6837 10.2355C27.3457 10.2355 27.8826 9.68992 27.8826 9.01708C27.8826 8.34423 27.3458 7.79875 26.6837 7.79875Z" fill="white"/>
+                </svg>    
+              </div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
+                <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
+              </picture>
+              <h2 class="intro__main">Ремонт HONOR</h2>
+              <div class="intro__image">
+                <img src="img/points.png" width="142" height="143" alt="points">
+              </div>
+              <a class="intro__info button" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item">
+            <div class="intro-phone__first">
+              <a class="intro__toggle" href="#">
+                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.6837 7.79875L4.28051 7.79875L9.62623 2.36545C10.0946 1.88977 10.0946 1.11813 9.62623 0.642523C9.15791 0.166563 8.39866 0.166563 7.93103 0.642523L0.538739 8.15558C0.0704203 8.63126 0.0704203 9.40297 0.538739 9.87851L7.93103 17.3919C8.16512 17.63 8.47191 17.7488 8.77863 17.7488C9.08535 17.7488 9.39214 17.63 9.62623 17.3919C10.0946 16.9162 10.0946 16.1446 9.62623 15.6691L4.28051 10.2355L26.6837 10.2355C27.3457 10.2355 27.8826 9.68992 27.8826 9.01708C27.8826 8.34423 27.3458 7.79875 26.6837 7.79875Z" fill="white"/>
+                </svg> 
+              </a>
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
+                <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
+              </picture>
+              <h2 class="intro__main">Ремонт HUAWEI</h2>
+              <div class="intro__pictures">
+                <img src="img/points.png" width="142" height="143" alt="points">
+              </div>
+              <a class="intro__info button" href="#">Подробнее</a>
+            </div>
+            <div class="intro-phone__second">
+              <div class="intro__toggle-second">
+                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.6837 7.79875L4.28051 7.79875L9.62623 2.36545C10.0946 1.88977 10.0946 1.11813 9.62623 0.642523C9.15791 0.166563 8.39866 0.166563 7.93103 0.642523L0.538739 8.15558C0.0704203 8.63126 0.0704203 9.40297 0.538739 9.87851L7.93103 17.3919C8.16512 17.63 8.47191 17.7488 8.77863 17.7488C9.08535 17.7488 9.39214 17.63 9.62623 17.3919C10.0946 16.9162 10.0946 16.1446 9.62623 15.6691L4.28051 10.2355L26.6837 10.2355C27.3457 10.2355 27.8826 9.68992 27.8826 9.01708C27.8826 8.34423 27.3458 7.79875 26.6837 7.79875Z" fill="white"/>
+                </svg>    
+              </div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
+                <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
+              </picture>
+              <h2 class="intro__main">Ремонт HONOR</h2>
+              <div class="intro__image">
+                <img src="img/points.png" width="142" height="143" alt="points">
+              </div>
+              <a class="intro__info button" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item">
+            <div class="intro-phone__first">
+              <a class="intro__toggle" href="#">
+                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.6837 7.79875L4.28051 7.79875L9.62623 2.36545C10.0946 1.88977 10.0946 1.11813 9.62623 0.642523C9.15791 0.166563 8.39866 0.166563 7.93103 0.642523L0.538739 8.15558C0.0704203 8.63126 0.0704203 9.40297 0.538739 9.87851L7.93103 17.3919C8.16512 17.63 8.47191 17.7488 8.77863 17.7488C9.08535 17.7488 9.39214 17.63 9.62623 17.3919C10.0946 16.9162 10.0946 16.1446 9.62623 15.6691L4.28051 10.2355L26.6837 10.2355C27.3457 10.2355 27.8826 9.68992 27.8826 9.01708C27.8826 8.34423 27.3458 7.79875 26.6837 7.79875Z" fill="white"/>
+                </svg> 
+              </a>
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/first-phone@1x.webp 1x, img/first-phone@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/first-phone@1x.png 1x, img/first-phone@2x.png 2x">
+                <img src="img/first-phone@1x.png" srcset="img/first-phone@2x.png 2x" width="259" height="360" alt="фото 1">
+              </picture>
+              <h2 class="intro__main">Ремонт HUAWEI</h2>
+              <div class="intro__pictures">
+                <img src="img/points.png" width="142" height="143" alt="points">
+              </div>
+              <a class="intro__info button" href="#">Подробнее</a>
+            </div>
+            <div class="intro-phone__second">
+              <div class="intro__toggle-second">
+                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.6837 7.79875L4.28051 7.79875L9.62623 2.36545C10.0946 1.88977 10.0946 1.11813 9.62623 0.642523C9.15791 0.166563 8.39866 0.166563 7.93103 0.642523L0.538739 8.15558C0.0704203 8.63126 0.0704203 9.40297 0.538739 9.87851L7.93103 17.3919C8.16512 17.63 8.47191 17.7488 8.77863 17.7488C9.08535 17.7488 9.39214 17.63 9.62623 17.3919C10.0946 16.9162 10.0946 16.1446 9.62623 15.6691L4.28051 10.2355L26.6837 10.2355C27.3457 10.2355 27.8826 9.68992 27.8826 9.01708C27.8826 8.34423 27.3458 7.79875 26.6837 7.79875Z" fill="white"/>
+                </svg>    
+              </div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/second-phone@1x.webp 1x, img/second-phone@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/second-phone@1x.png 1x, img/second-phone@2x.png 2x">
+                <img src="img/second-phone@1x.png" srcset="img/second-phone@2x.png 2x" width="259" height="300" alt="фото 2">
+              </picture>
+              <h2 class="intro__main">Ремонт HONOR</h2>
+              <div class="intro__image">
+                <img src="img/points.png" width="142" height="143" alt="points">
+              </div>
+              <a class="intro__info button" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
 
       <section class="repair">
         <h2>Мы ремонтируем</h2>
@@ -621,6 +650,7 @@
       <span>© Huawei 2019 Все права защищены</span>
       <span>Политика конфиденциальности</span>
     </div>
-  </div>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main_slider.js"></script>
 </body>
 </html>
