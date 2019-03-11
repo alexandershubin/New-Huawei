@@ -516,15 +516,20 @@ li.site-list__item--search {
 .repair {
   position: relative;
 }
-.repair svg {
+.repair__vector-small svg {
   position: absolute;
   bottom: 23px;
   right: 17px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.repair svg path {
+.repair__vector-small svg path {
   fill: #ffffff;
+}
+.repair__vector-phone img {
+  position: absolute;
+  bottom: 14px;
+  right: 15px;
 }
 .repair h2 {
   font-size: 48px;
@@ -675,6 +680,14 @@ li.site-list__item--search {
   right: -5px;
   bottom: 20px;
   background-color: #000000;
+}
+.repair__vector-phone {
+  position: absolute;
+  width: 67px;
+  height: 67px;
+  right: -5px;
+  bottom: 100px;
+  background-color: #21bde4;
 }
 /**
  * Owl Carousel v2.3.4
